@@ -28,7 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class SpringAssistantService {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SpringAssistantService.class);
-	private static final String storagePath = "D:/dump/";
+	private static final String storagePath = "D:/";
 	
 	@Autowired private JdbcClient jdbcClient;
 	@Autowired private VectorStore vectorStore;
@@ -74,7 +74,7 @@ public class SpringAssistantService {
 	private void saveFile(String path, MultipartFile resume) throws IOException {
 		
 		logger.info("Saving file : "+resume.getOriginalFilename());
-    	File newFile = new File("D:/dump/", resume.getOriginalFilename() );
+    	File newFile = new File(storagePath, resume.getOriginalFilename() );
 		FileOutputStream outputStream = new FileOutputStream(newFile);
 		FileCopyUtils.copy(resume.getInputStream(), outputStream);
 		outputStream.close();
