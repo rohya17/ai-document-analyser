@@ -1,5 +1,5 @@
 # ai-document-analyser
-In this project i have focused on analysing any document using ollama AI and then asking ai the quetions about the document
+In this project i have focused on analyzing any document using ollama AI and then asking ai the quetions about the document using (RAG) Retrieval-Augmented Generation
 
 to run this application you need following setup
 * First you need to download ollama ai which is open source llm ai model, you can download it from https://ollama.com/download/windows, i have done it on my windows os you can do it on any os you are comfortable with.
